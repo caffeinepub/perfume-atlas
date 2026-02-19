@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup for 4 pages (Home, Types & Guide, Reviews, Top Picks) wrapped in a shared layout component.",
+  "frontend/src/components/layout/SiteLayout.tsx": "Shared layout component providing consistent header navigation with logo, page links, and footer with attribution across all routes.",
+  "frontend/src/pages/HomePage.tsx": "Landing page featuring hero section with generated image, introduction to perfumery concepts, and navigation cards linking to main site sections.",
+  "frontend/src/pages/TypesGuidePage.tsx": "Comprehensive guide page with tabs covering 6 fragrance families (accordion format), note pyramid structure (3 cards), and concentration level comparisons (table + cards).",
+  "frontend/src/pages/ReviewsPage.tsx": "Reviews page displaying 6 detailed perfume reviews in a grid layout with rating guide section explaining longevity and sillage scales.",
+  "frontend/src/components/reviews/ReviewCard.tsx": "Reusable review card component displaying perfume details, scent profile, performance metrics with progress bars, occasions, and pros/cons lists.",
+  "frontend/src/pages/TopPicksBrandsPage.tsx": "Curated recommendations page with tabs for seasonal picks (12 fragrances across 4 seasons), beginner-friendly options, and notable perfume house profiles with designer vs niche comparison.",
+  "frontend/src/index.css": "Global styles with warm amber/gold OKLCH color palette for luxury perfume aesthetic, custom typography using Playfair Display serif font, and refined design tokens.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Playfair Display serif font, extended color system, elegant shadow utilities, and fade-in animation for polished interactions.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks (empty as app is fully static with no backend data fetching)."
+}

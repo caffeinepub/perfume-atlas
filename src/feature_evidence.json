@@ -1,0 +1,140 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-static-4-5-page-website-about-perfumes-all-types-with-clear-navigation-between-pages",
+      "featureTitle": "Create a static 4–5 page website about perfumes (all types) with clear navigation between pages.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ReviewsPage.tsx",
+        "frontend/src/pages/TopPicksBrandsPage.tsx",
+        "frontend/src/pages/TypesGuidePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-home-page-that-introduces-perfumes-and-explains-how-the-site-is-organized-types-notes-concentration-and-reviews",
+      "featureTitle": "Add a Home page that introduces perfumes and explains how the site is organized (types, notes, concentration, and reviews).",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-perfume-types-guide-page-with-detailed-explanations-covering-common-fragrance-families-e-g-floral-woody-oriental-amber-fresh-citrus-gourmand-note-structure-top-middle-base-and-concentration-levels-edt-edp-parfum-cologne",
+      "featureTitle": "Add a “Perfume Types & Guide” page with detailed explanations covering common fragrance families (e.g., floral, woody, oriental/amber, fresh/citrus, gourmand), note structure (top/middle/base), and concentration levels (EDT/EDP/Parfum/Cologne).",
+      "files": [
+        "frontend/src/pages/TypesGuidePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-reviews-page-containing-multiple-detailed-sample-perfume-reviews-presented-in-a-consistent-format-overview-scent-profile-longevity-sillage-season-occasion-pros-cons-rating",
+      "featureTitle": "Add a “Reviews” page containing multiple detailed sample perfume reviews presented in a consistent format (overview, scent profile, longevity, sillage, season/occasion, pros/cons, rating).",
+      "files": [
+        "frontend/src/components/reviews/ReviewCard.tsx",
+        "frontend/src/pages/ReviewsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-one-additional-page-either-top-picks-brands-or-about-contact-to-reach-a-total-of-4-5-pages-with-detailed-static-content-relevant-to-perfumes",
+      "featureTitle": "Add one additional page (either “Top Picks & Brands” or “About / Contact”) to reach a total of 4–5 pages, with detailed static content relevant to perfumes.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/TopPicksBrandsPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-creative-visual-theme-colors-typography-spacing-layout-suitable-for-a-premium-perfume-editorial-website-and-use-it-consistently-across-all-pages",
+      "featureTitle": "Apply a coherent, creative visual theme (colors, typography, spacing, layout) suitable for a premium perfume editorial website and use it consistently across all pages.",
+      "files": [
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-required-static-images-in-the-frontend-public-assets-folder-and-render-them-in-the-ui-hero-headers-and-section-accents-without-routing-images-through-the-backend",
+      "featureTitle": "Generate and include required static images in the frontend public assets folder and render them in the UI (hero/headers and section accents) without routing images through the backend.",
+      "files": [
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/TypesGuidePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

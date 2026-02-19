@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Warm amber & gold palette for luxury perfume aesthetic */
+        --background: 0.98 0.01 45;
+        --foreground: 0.25 0.02 30;
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.02 30;
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 30;
+        --primary: 0.45 0.12 45;
+        --primary-foreground: 0.98 0.01 45;
+        --secondary: 0.92 0.03 50;
+        --secondary-foreground: 0.30 0.03 35;
+        --muted: 0.95 0.02 45;
+        --muted-foreground: 0.55 0.02 30;
+        --accent: 0.70 0.15 35;
+        --accent-foreground: 0.98 0.01 45;
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.01 45;
+        --border: 0.88 0.02 45;
+        --input: 0.88 0.02 45;
+        --ring: 0.45 0.12 45;
+        --chart-1: 0.65 0.18 40;
+        --chart-2: 0.60 0.12 180;
+        --chart-3: 0.55 0.10 280;
+        --chart-4: 0.70 0.15 120;
+        --chart-5: 0.75 0.18 60;
+    }
+
+    .dark {
+        --background: 0.18 0.02 30;
+        --foreground: 0.95 0.01 45;
+        --card: 0.22 0.02 30;
+        --card-foreground: 0.95 0.01 45;
+        --popover: 0.20 0.02 30;
+        --popover-foreground: 0.95 0.01 45;
+        --primary: 0.70 0.15 45;
+        --primary-foreground: 0.18 0.02 30;
+        --secondary: 0.28 0.03 35;
+        --secondary-foreground: 0.95 0.01 45;
+        --muted: 0.30 0.02 30;
+        --muted-foreground: 0.65 0.02 40;
+        --accent: 0.50 0.12 40;
+        --accent-foreground: 0.95 0.01 45;
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.95 0.01 45;
+        --border: 0.30 0.02 30;
+        --input: 0.30 0.02 30;
+        --ring: 0.65 0.12 45;
+        --chart-1: 0.65 0.18 40;
+        --chart-2: 0.60 0.12 180;
+        --chart-3: 0.55 0.10 280;
+        --chart-4: 0.70 0.15 120;
+        --chart-5: 0.75 0.18 60;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "kern" 1, "liga" 1;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-serif tracking-tight;
+    }
+
+    h1 {
+        @apply text-4xl md:text-5xl lg:text-6xl font-light;
+    }
+
+    h2 {
+        @apply text-3xl md:text-4xl font-light;
+    }
+
+    h3 {
+        @apply text-2xl md:text-3xl font-normal;
+    }
+
+    h4 {
+        @apply text-xl md:text-2xl font-normal;
+    }
+
+    p {
+        @apply leading-relaxed;
+    }
+
+    a {
+        @apply transition-colors duration-200;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}

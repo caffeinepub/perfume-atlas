@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Static HTML website about perfumes (all types) with detailed descriptions and reviews across 4–5 pages.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Elegant perfume bottle hero banner on a marble vanity with soft warm lighting (perfume-hero.dim_1600x600.png)\n- Set of 6 minimalist line icons related to fragrance notes (flower, citrus, wood, amber, vanilla, musk) on transparent background (note-icons.dim_512x512.png)\n- Abstract fragrance mist background texture with subtle gradients (fragrance-mist-bg.dim_1920x1080.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-static-4-5-page-website-about-perfumes-all-types-with-clear-navigation-between-pages",
+      "title": "Create a static 4–5 page website about perfumes (all types) with clear navigation between pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-home-page-that-introduces-perfumes-and-explains-how-the-site-is-organized-types-notes-concentration-and-reviews",
+      "title": "Add a Home page that introduces perfumes and explains how the site is organized (types, notes, concentration, and reviews).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-perfume-types-guide-page-with-detailed-explanations-covering-common-fragrance-families-e-g-floral-woody-oriental-amber-fresh-citrus-gourmand-note-structure-top-middle-base-and-concentration-levels-edt-edp-parfum-cologne",
+      "title": "Add a “Perfume Types & Guide” page with detailed explanations covering common fragrance families (e.g., floral, woody, oriental/amber, fresh/citrus, gourmand), note structure (top/middle/base), and concentration levels (EDT/EDP/Parfum/Cologne).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-reviews-page-containing-multiple-detailed-sample-perfume-reviews-presented-in-a-consistent-format-overview-scent-profile-longevity-sillage-season-occasion-pros-cons-rating",
+      "title": "Add a “Reviews” page containing multiple detailed sample perfume reviews presented in a consistent format (overview, scent profile, longevity, sillage, season/occasion, pros/cons, rating).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-one-additional-page-either-top-picks-brands-or-about-contact-to-reach-a-total-of-4-5-pages-with-detailed-static-content-relevant-to-perfumes",
+      "title": "Add one additional page (either “Top Picks & Brands” or “About / Contact”) to reach a total of 4–5 pages, with detailed static content relevant to perfumes.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-creative-visual-theme-colors-typography-spacing-layout-suitable-for-a-premium-perfume-editorial-website-and-use-it-consistently-across-all-pages",
+      "title": "Apply a coherent, creative visual theme (colors, typography, spacing, layout) suitable for a premium perfume editorial website and use it consistently across all pages.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-required-static-images-in-the-frontend-public-assets-folder-and-render-them-in-the-ui-hero-headers-and-section-accents-without-routing-images-through-the-backend",
+      "title": "Generate and include required static images in the frontend public assets folder and render them in the UI (hero/headers and section accents) without routing images through the backend.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a 4–5 page static HTML website about perfumes (all types) including detailed descriptions and reviews.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Perfume Atlas",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

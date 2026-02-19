@@ -1,0 +1,64 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-18T06:38:04.427Z",
+  "summary": "Diff implements a 4-page static TanStack Router site (Home, Types & Guide, Reviews, Top Picks) with a shared Tailwind-based layout/theme and detailed static content, including a hero image reference on Home. However, the required generated image assets are not evidenced as added under frontend/public/assets/generated, and additional required images (note icons + mist background) are not shown as used. The diff also introduces Internet Identity/auth + actor/query plumbing, which appears outside the static-content/non-goals scope.",
+  "missing_requirements": [
+    {
+      "id": "REQ-7",
+      "requirement": "Generate and include required static images in the frontend public assets folder and render them in the UI (hero/headers and section accents) without routing images through the backend.",
+      "reason": "The UI references the hero image path, but the diff does not show any images added under frontend/public/assets/generated. Also, there is no evidence the required note-icons image or fragrance-mist background image exists or is rendered anywhere.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx (references /assets/generated/perfume-hero.dim_1600x600.png)",
+        "ADDED FILES list does not include frontend/public/assets/generated/*"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication provider and identity-based actor creation with React Query caching/refetch logic.",
+      "reason": "BuildRequest non-goals explicitly exclude Internet Identity login and personalized user data; the site should be a static-content experience not depending on backend/auth for content.",
+      "evidence": [
+        "frontend/src/main.tsx (wraps app with InternetIdentityProvider and QueryClientProvider)",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Backend canister stub added despite static frontend requirement.",
+      "reason": "BuildRequest scope is a static-content perfume website with no backend calls required for page content; adding a backend actor is not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Caffeine.ai referral/attribution link in footer with window.location dependency.",
+      "reason": "Not requested by BuildRequest requirements; adds external referral behavior unrelated to perfume content.",
+      "evidence": [
+        "frontend/src/components/layout/SiteLayout.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/layout/SiteLayout.tsx",
+    "frontend/src/components/reviews/ReviewCard.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/ReviewsPage.tsx",
+    "frontend/src/pages/TopPicksBrandsPage.tsx",
+    "frontend/src/pages/TypesGuidePage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

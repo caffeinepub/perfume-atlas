@@ -1,0 +1,170 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Perfume Atlas — static multi-page perfume guide and reviews",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a static 4–5 page site with clear navigation between pages (no backend dependency).",
+      "acceptanceCriteria": [
+        "The site contains 4–5 distinct pages (separate routes/views) with working navigation links between them.",
+        "Each page renders without requiring any backend data or authentication to view content."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the top-level app shell that renders a shared layout (header/nav + footer) and a client-side router for 4 pages (Home, Perfume Types & Guide, Reviews, Top Picks & Brands). Ensure content is fully static with no backend calls."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout component used by all routes, including a consistent header with navigation links and a footer. Use shadcn-ui components (e.g., NavigationMenu/Button/Separator as appropriate) to provide accessible, consistent navigation UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home route/view component with static content only and links to the other pages (wired via router)."
+        },
+        {
+          "path": "frontend/src/pages/TypesGuidePage.tsx",
+          "operation": "create",
+          "description": "Create the Perfume Types & Guide route/view component (wired via router) with static educational content."
+        },
+        {
+          "path": "frontend/src/pages/ReviewsPage.tsx",
+          "operation": "create",
+          "description": "Create the Reviews route/view component (wired via router) that renders multiple static review entries in a consistent layout."
+        },
+        {
+          "path": "frontend/src/pages/TopPicksBrandsPage.tsx",
+          "operation": "create",
+          "description": "Create the Top Picks & Brands route/view component (wired via router) with static content to reach 4 total pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a Home page that introduces perfumes and explains site organization (types, notes, concentration, reviews) with links to main pages.",
+      "acceptanceCriteria": [
+        "Home page includes a short intro section and a concise table/section linking to the main pages (Types, Reviews, etc.)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add a hero intro explaining what perfumes are and how the site is organized (types/families, note pyramid, concentration levels, reviews), plus a concise linked section (cards or list) that navigates to Types/Guide, Reviews, and Top Picks & Brands. Use shadcn-ui components (e.g., Card/Badge) to present the linked sections consistently. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add a detailed “Perfume Types & Guide” page covering fragrance families, note structure, and concentration levels.",
+      "acceptanceCriteria": [
+        "Types/Guide page includes detailed sections for at least 5 fragrance families, note pyramid explanation, and concentration level comparisons."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TypesGuidePage.tsx",
+          "operation": "modify",
+          "description": "Implement detailed static sections for at least 5 fragrance families (e.g., floral, woody, oriental/amber, fresh/citrus, gourmand), explain top/middle/base notes, and compare EDT/EDP/Parfum/Cologne. Use shadcn-ui components (e.g., Accordion/Tabs/Table/Separator) to structure long-form content clearly. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add a “Reviews” page with at least 6 detailed sample reviews in a consistent format.",
+      "acceptanceCriteria": [
+        "Reviews page includes at least 6 reviews.",
+        "Each review displays the required fields (overview, scent profile, longevity, sillage, season/occasion, pros/cons, rating)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ReviewsPage.tsx",
+          "operation": "modify",
+          "description": "Add at least 6 static sample perfume reviews and render each in a consistent review card format containing: overview, scent profile, longevity, sillage, season/occasion, pros/cons, rating. Use shadcn-ui components (e.g., Card/Badge/Separator/Progress) to standardize presentation. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/reviews/ReviewCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable presentational component for a single review (static props) to enforce consistent formatting across all reviews. Use shadcn-ui Card/Badge (and optionally Separator) to provide a premium editorial layout. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add one additional substantive perfume-related page to reach a total of 4–5 pages.",
+      "acceptanceCriteria": [
+        "The site has a total of 4 or 5 pages.",
+        "The additional page contains substantive perfume-related content (not placeholder text)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/TopPicksBrandsPage.tsx",
+          "operation": "modify",
+          "description": "Implement a substantive static “Top Picks & Brands” page (e.g., curated picks by season/occasion, beginner-friendly sets, niche vs designer overview, notable houses, how to sample). Use shadcn-ui components (e.g., Card/Badge) to format pick lists and brand highlights. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Ensure the additional page is registered in the router and appears in the header navigation so the site totals 4 pages with working navigation links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Apply a coherent premium editorial theme using Tailwind-based styling consistently across pages.",
+      "acceptanceCriteria": [
+        "All pages share consistent header/nav styling, typography scale, and spacing system.",
+        "Theme does not rely on default browser styles; it uses Tailwind-based styling throughout."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global Tailwind layers (base/components/utilities) and set a premium editorial design system using CSS variables already referenced by Tailwind (colors, radius) plus base typography defaults (headings, body text, link styles). Ensure all pages use Tailwind classes and shared layout spacing rather than default browser styles."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Apply consistent Tailwind-based header/nav layout, typography scale, and spacing system used across all pages (e.g., consistent max width, section padding, and navigation styling)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Include required generated static images under public assets and render them in the UI without backend routing.",
+      "acceptanceCriteria": [
+        "Generated images exist under frontend/public/assets/generated and are referenced directly by the frontend.",
+        "At least the hero image is displayed on the Home page and icons/accents are used on at least one other page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Render the hero banner image from frontend/public/assets/generated/perfume-hero.dim_1600x600.png prominently on the Home page (e.g., hero section background/figure) and incorporate the abstract background texture from frontend/public/assets/generated/fragrance-mist-bg.dim_1920x1080.png as a subtle section accent."
+        },
+        {
+          "path": "frontend/src/pages/TypesGuidePage.tsx",
+          "operation": "modify",
+          "description": "Use the icon set image from frontend/public/assets/generated/note-icons.dim_512x512.png as visual accents (e.g., alongside fragrance families/notes) on this page, keeping all assets referenced directly from the public folder (no backend involvement)."
+        },
+        {
+          "path": "frontend/public/assets/generated/perfume-hero.dim_1600x600.png",
+          "operation": "create",
+          "description": "Add the generated image asset file to the public generated assets folder so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/note-icons.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated image asset file to the public generated assets folder so it can be referenced directly by the frontend UI."
+        },
+        {
+          "path": "frontend/public/assets/generated/fragrance-mist-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated image asset file to the public generated assets folder so it can be referenced directly by the frontend UI."
+        }
+      ]
+    }
+  ]
+}
